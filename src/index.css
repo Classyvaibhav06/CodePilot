@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Colors */
+  --color-paper-white: #f6f6f8;
+  --color-card-white: #ffffff;
+  --color-deep-ink: #011821;
+  --color-carbon: #12161e;
+  --color-slate: #7c7f88;
+  --color-mist: #e3e4e8;
+  --color-fog: #a9acb6;
+  --color-graphite: #3b3e47;
+  --color-deep-indigo: #111a4a;
+  --color-ember-orange: #ec652b;
+  --color-midnight-teal: #023247;
+  --color-forest-teal: #167e6c;
+  --color-sky-blue: #7ea7e9;
+  --color-pale-cyan: #c1e8ef;
+  --color-mint: #44b48b;
+  --color-lavender: #9f7aee;
+
+  /* Typography */
+  --font-suisseintl: 'SuisseIntl', 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-paper-white);
+    color: var(--color-deep-ink);
+    font-family: var(--font-suisseintl);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .tracking-tight-display {
+    letter-spacing: -0.03em;
+  }
+  
+  .tracking-tight-heading {
+    letter-spacing: -0.02em;
+  }
+
+  .shadow-subtle-box {
+    box-shadow: rgba(17, 26, 74, 0.1) 0px 1px 3px 0px, rgba(17, 26, 74, 0.05) 0px 1px 0px 0px, inset rgba(255, 255, 255, 0.5) 0px 1px 0px 0px, inset rgba(255, 255, 255, 0.5) 0px 1px 4px 0px;
+  }
+
+  .shadow-hover-card {
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 40px 32px 0px, rgba(0, 0, 0, 0.03) 0px 22px 18px 0px, rgba(0, 0, 0, 0.03) 0px 12px 10px 0px, rgba(0, 0, 0, 0.04) 0px 7px 5px 0px, rgba(0, 0, 0, 0.07) 0px 3px 2px 0px;
+  }
+
+  /* Dot map background pattern */
+  .bg-halftone-map {
+    background: linear-gradient(125deg, #ec652b 0%, #9f7aee 14%, #7ea7e9 32%, #c1e8ef 50%, #44b48b 68%, #eab308 85%);
+    -webkit-mask-image: radial-gradient(circle, black 1px, transparent 1px);
+    -webkit-mask-size: 8px 8px;
+    mask-image: radial-gradient(circle, black 1px, transparent 1px);
+    mask-size: 8px 8px;
+    position: absolute;
+    inset: 0;
+    opacity: 0.8;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-mist);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-fog);
+}
